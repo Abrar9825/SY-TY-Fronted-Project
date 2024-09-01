@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #hero {
+        position: absolute;
+        height: 500px;
+        top: 60px;
+        left: 10px;
+    }
+
+    #villain {
+        position: absolute;
+        height: 600px;
+        top: 10px;
+        left: 700px;
+    }
+
+    #lightning {
+        position: absolute;
+        height: 120px;
+        width: 120px;
+        top: 158px;
+        left: 357px;
+    }
+</style>
+
+<body>
+    <img id="hero" src="img/hero.jpg">
+    <img id="villain" src="img/villan.jpg">
+    <img id="lightning" src="img/light.png">
+</body>
+<script>
+    let hero = document.querySelector("#hero");
+    let villain = document.querySelector("#villain");
+    let lightning = document.querySelector("#lightning");
+    let lightningstart = { "left": "290px" };
+    let lightningend = { "left": "900px" };
+    let options = { "duration": 2000 };
+
+    // get a low opacity
+    let hitvillain = () => {
+        let villanstart = {
+            width:10,
+            opacity:100
+        };
+        let villanend = {
+            width:20,
+            opacity:0
+
+        };
+        let options = { "duration": 1500 };
+
+        villain.animate([villanstart, villanend], options);
+    }
+    // start a hero function 
+    let herohappy = () => {
+        let herostart = {
+            top: 0
+        };
+        let heroend = {
+            top: 100
+        };
+        let options = { "duration": 1000 };//give a duration
+        hero.animate([herostart, heroend, herostart], options);//calling a function 
+
+    }
+
+    lightning.animate([lightningstart, lightningend], options).onfinish = hitvillain;
+    // calling a function with a villan function
+</script>
+
+</html>

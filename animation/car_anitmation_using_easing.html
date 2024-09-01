@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        overflow: hidden;
+    }
+
+    .img1 {
+        position: absolute;
+        height: 300px;
+        top: 150px;
+
+    }
+
+    .img2 {
+        position: absolute;
+        height: 300px;
+        left: 500px;
+        top: 20px;
+    }
+
+    .img3 {
+        position: absolute;
+        height: 300px;
+        left: 500px;
+        top: 20px;
+    }
+</style>
+
+<body>
+    <img class="img3" src="img/green_light.svg" alt="">
+    <img class="img1" src="img/car.svg" alt="">
+    <img class="img2" src="img/red_light.svg" alt="">
+
+</body>
+<script>
+    //Setup website here
+    let car = document.querySelector(".img1");
+    let redlight = document.querySelector(".img2");
+
+    setTimeout(() => {
+        animation();
+    }, 2000);
+    let animation = () => {
+        redlight.style.display = "none";
+        let startkeyframe = { "left": "2vw" };
+        let endkeyframe = { "left": "1000vw" };
+        let opations = {
+            duration: 5000,
+            easing: "cubic-bezier(0.5, 0, 0.75, 0)"
+        };
+        car.animate([startkeyframe, endkeyframe, startkeyframe], opations);
+    };
+
+
+    //Run animation code hee
+    // lightning.animate([lightningstart, lightningend], options);
+</script>
+
+</html>

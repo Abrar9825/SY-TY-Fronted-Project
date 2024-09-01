@@ -1,0 +1,63 @@
+<?php
+  session_start();
+  if(!$_SESSION['username'])
+  {
+    
+    header('location:login.php?error=Create Account');
+  }
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Iconic Fitness</title>
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="con">
+		<header class="header">
+			<!-- This part for logo -->
+			<div class="left">
+				<h3>ICONIC FITNESS</h3>
+			</div>
+			<!-- This part for navbar -->
+			<div class="mid">
+				<ul class="navbar">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
+					<li><a href="#">services</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="logout.php">Logout</a></li>
+				</ul>
+			</div>
+
+			<!-- this part for button -->
+			<div class="right">
+			</div>
+		</header>
+		<div class="card">
+			<div class="first">
+				<div class="one"></div>
+				<div class="two"></div>
+			</div>
+			<div class="second">
+				<div class="one1"></div>
+				<div class="two1"></div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<br><br>
+		<p>&copy;2004-2022 Iconic fitness</p>
+	</footer>
+</body>
+
+</html>
+<!-- php section -->
+<!-- echo " ".strtoupper($_SESSION['username']); -->

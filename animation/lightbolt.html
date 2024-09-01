@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="story_start.css">
+</head>
+<style>
+    #hero {
+        position: absolute;
+        height: 500px;
+        top: 60px;
+        left: 10px;
+    }
+
+    #villain {
+        position: absolute;
+        height: 600px;
+        top: 10px;
+        left: 700px;
+    }
+
+    #lightning {
+        position: absolute;
+        height: 120px;
+        width: 120px;
+        top: 158px;
+        left: 357px;
+    }
+</style>
+
+<body>
+    <img id="hero" src="img/hero.jpg">
+    <img id="villain" src="img/villan.jpg">
+    <img id="lightning" src="img/light.png">
+</body>
+<script>
+    let hero = document.querySelector("#hero");
+    let villain = document.querySelector("#villain");
+    let lightning = document.querySelector("#lightning");
+    let lightningend = { "left": "290px","top":"600px"};
+    let lightningstart = { "left": "900px" };
+    let options = { "duration": 2000 };
+
+
+    lightning.animate([lightningstart, lightningend], options);
+</script>
+
+</html>
