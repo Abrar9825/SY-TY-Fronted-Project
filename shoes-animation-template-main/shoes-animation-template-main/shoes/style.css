@@ -1,0 +1,338 @@
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    background-color: rgba(132, 164, 211, 255);
+    font-family: cursive;
+}
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+} */
+
+/* ::before,
+::after {
+    box-sizing: border-box;
+} */
+
+.container {
+    margin: 50px;
+    height: 690px;
+    position: relative;
+    background-color: rgba(239, 239, 217, 1);
+}
+
+.inner_container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80px;
+}
+
+nav {
+    display: flex;
+}
+
+.inner_container ul {
+    display: flex;
+    margin: 20px 20px;
+}
+
+.inner_container li {
+    padding-left: 30px;
+    padding-top: 20px;
+    font-weight: 900;
+}
+
+li {
+    list-style: none;
+    list-style: none;
+    font-size: 25px;
+}
+
+section {
+    overflow: hidden;
+}
+
+.round_one {
+    top: 150px;
+    left: 550px;
+    border-radius: 100%;
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    z-index: -0;
+    background-color: rgba(132, 164, 211, 255);
+    animation: round 2s ease 1;
+}
+
+.round_two {
+    top: 150px;
+    left: 550px;
+    border-radius: 100%;
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    z-index: -0;
+    display: none;
+    background-color: rgb(253, 253, 239);
+    animation: round 2s ease 1;
+}
+
+@keyframes round {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+}
+
+.img_two_main img {
+    height: 450px;
+    width: 450px;
+}
+
+.img_two_main {
+    display: none;
+}
+
+.one_img {
+    position: absolute;
+    left: 436px;
+    transform: rotate(-30deg);
+    top: 50px;
+    animation: one 7s ease infinite;
+}
+
+.two_img {
+    position: absolute;
+    left: 664px;
+    top: 150px;
+    transform: rotate(20deg);
+    animation: two 7s ease infinite;
+}
+
+.second1_img {
+    position: absolute;
+    left: 410px;
+    top: 121px;
+    animation: one 7s ease infinite;
+}
+
+.second2_img {
+    position: absolute;
+    left: 741px;
+    top: 222px;
+    animation: two 7s ease infinite;
+}
+
+/* shoes animation */
+@keyframes one {
+
+    0%,
+    100% {
+        transform: rotate(-30deg);
+
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+}
+
+@keyframes two {
+
+    0%,
+    100% {
+        transform: rotate(20deg);
+
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+}
+
+.text-main_one {
+    position: absolute;
+    top: 250px;
+    padding: 65px;
+    font-size: 20px;
+    animation: textani 5s ease 1;
+}
+
+.text-main_two {
+    position: absolute;
+    top: 250px;
+    padding: 65px;
+    font-size: 20px;
+    animation: textani 5s ease 1;
+    display: none;
+}
+
+/* textani animation */
+@keyframes textani {
+    0% {
+        margin-left: 500px;
+        z-index: -10;
+    }
+
+    100% {
+        margin-right: 0;
+    }
+}
+
+.btn {
+    position: absolute;
+    top: 600px;
+    left: 60px;
+
+}
+
+.btn i {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+    width: 50px;
+}
+
+button:nth-child(1) {
+    background-color: black;
+    color: white;
+}
+
+button:nth-child(1):hover {
+    background-color: white;
+    color: black;
+}
+
+button:nth-child(2) {
+    background-color: white;
+    color: black;
+}
+
+button:nth-child(2):hover {
+    background-color: black;
+    color: white;
+}
+
+/* main logic */
+.animation1 {
+    animation: animation1 3s ease 1;
+}
+
+.animation2 {
+    animation: animation2 3s ease 1;
+}
+
+.animation3 {
+    animation: animation3 3s ease 1;
+}
+
+.animation4 {
+    animation: animation4 3s ease 1;
+}
+
+@keyframes animation1 {
+    0% {
+        margin-left: 1200px;
+    }
+
+    50% {
+        transform: rotate(100deg);
+    }
+
+    100% {
+        margin: 0;
+
+    }
+}
+
+@keyframes animation2 {
+    0% {
+        left: -1200px;
+    }
+
+    50% {
+        transform: rotate(100deg);
+    }
+
+    100% {
+        margin: 0;
+
+    }
+}
+
+.shobox {
+    position: absolute;
+    display: flex;
+    top: 540px;
+    height: 150px;
+    width: 560px;
+    right: -1px;
+    background-color: white;
+}
+
+.shobox:hover img {
+    top: -80px;
+}
+
+.shobox img {
+    position: absolute;
+    top: -40px;
+    height: 250px;
+    width: 200px;
+    margin-bottom: 100px;
+    transition: 2s;
+}
+
+.lock {
+    background-color: black;
+    color: white;
+    display: flex;
+    left: 433px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: 2s;
+}
+
+.shoimg {
+    display: flex;
+}
+
+.lock:hover {
+    background-color: white;
+    color: black;
+}
+
+.lock i {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.txt {
+    position: absolute;
+    left: 230px;
+    top: 30px;
+    font-size: 15px;
+    font-weight: 900;
+}
+
